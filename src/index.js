@@ -1,19 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import AppElement from "./components/App";
 
-class App extends React.Component {
-	render() {
-		return (
-			<div className="container">
-				<div className="well">
-					<h1>Hey, you have chores to do.</h1>
-				</div>
-			</div>
-		);
-	}
-}
-
-// ========================================
+const App = () => (
+	<MuiThemeProvider>
+		<AppElement />
+	</MuiThemeProvider>
+);
 
 ReactDOM.render(<App />, document.getElementById("root"));
