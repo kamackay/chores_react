@@ -1,16 +1,15 @@
 import React from "react";
 import ChoreElement from "./ChoreElement";
-import FloatingActionButton from "material-ui/FloatingActionButton";
-import ContentAdd from "material-ui/svg-icons/content/add";
-
-const fabStyle = { position: "fixed", bottom: 25, right: 25 };
+import AddChoreFab from "./AddChoreFab";
+import Paper from "material-ui/Paper";
 
 export default () => (
 	<div className="container">
 		<h1>Chores</h1>
-		<ChoreElement />
-		<FloatingActionButton style={fabStyle}>
-			<ContentAdd />
-		</FloatingActionButton>
+		<Paper style={{}} zDepth={3}>
+			<ChoreElement />
+			<ChoreElement />
+		</Paper>
+		<AddChoreFab />
 	</div>
 );
