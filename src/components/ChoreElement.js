@@ -2,13 +2,22 @@ import React from "react";
 import { Card, CardHeader } from "material-ui/Card";
 
 export default class ChoreElement extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			title: props.title,
+			subtitle: props.subtitle,
+			avatar: "images/main_icon.png"
+		};
+	}
+
 	render() {
 		return (
-			<Card>
+			<Card style={{ margin: 20 }}>
 				<CardHeader
-					title="Dust the Fan"
-					subtitle="Every 3 months"
-					avatar="images/main_icon.png"
+					title={this.state.title}
+					subtitle={this.state.subtitle}
+					avatar={this.state.avatar}
 				/>
 			</Card>
 		);

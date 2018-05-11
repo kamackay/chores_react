@@ -48,3 +48,7 @@ ul {
 #root * {
 	font-family: "Roboto";
 }
+
+.noscroll {
+	overflow: hidden;
+}
