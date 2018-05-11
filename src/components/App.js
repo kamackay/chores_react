@@ -8,7 +8,13 @@ const paperStyles = { padding: 10, overflow: "auto", height: "80vh" };
 const choresElements = [];
 
 for (let x = 0; x < 10; x++) {
-	choresElements.push(<ChoreElement title={"Chore " + (x + 1)} key={x} />);
+	choresElements.push(
+		<ChoreElement
+			key={x}
+			title={"Chore " + (x + 1)}
+			subtitle="You should do it"
+		/>
+	);
 }
 
 export default () => (
